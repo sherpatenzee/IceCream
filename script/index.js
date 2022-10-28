@@ -12,18 +12,20 @@ window.onload = function () {
         }
 
         document.getElementById("submitBtn").onclick = totalCost; 
+        
       }
       
+     
 
 function totalCost() {
 
  //no of scoop 
  let scoops = document.getElementById("scoops");
  let newScoop = scoops.value;
- let ScoopCost = 2.25;
- //let addScoop = 1.25;
- let price = ScoopCost * newScoop;
-
+ 
+ 
+//toppings
+ let price = (((newScoop - 1) * 1.25) + 2.25);
  let extraTop = 0;
   let sprinkle = document.getElementById("sprinkle").checked;
   if (sprinkle) {
@@ -58,13 +60,9 @@ let total = document.getElementById("total");
 total.innerHTML = "Total Due: $" + totalDue;
 
 
-//toppings
-
-
-  
-
 
 
 
 }
+
 
