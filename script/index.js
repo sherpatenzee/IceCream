@@ -24,20 +24,44 @@ function totalCost() {
  //let addScoop = 1.25;
  let price = ScoopCost * newScoop;
 
+ let extraTop = 0;
+  let sprinkle = document.getElementById("sprinkle").checked;
+  if (sprinkle) {
+    extraTop += .50;
+  }
+  let cream = document.getElementById("cream").checked;
+  if (cream) {
+    extraTop += .25;
+  }
+  let fudge = document.getElementById("fudge").checked;
+  if (fudge) {
+    extraTop += 1.25;
+  }
+  let cherry = document.getElementById("cherry").checked;
+  if (cherry) {
+    extraTop += .25;
+  }
+
+
  let basePrice = document.getElementById("base");
- basePrice.innerHTML = "Base price: $" + price;
+ let add = price + extraTop;
+ basePrice.innerHTML = "Base price: $" + add;
 
 
-let tax = 0.08 * price;
+let tax = 0.08 * add;
 let taxTotal = document.getElementById("tax");
 taxTotal.innerHTML = "Tax: $" + tax;
 
 
-let totalDue = price + tax 
+let totalDue = add + tax ;
 let total = document.getElementById("total");
 total.innerHTML = "Total Due: $" + totalDue;
 
 
+//toppings
+
+
+  
 
 
 
