@@ -15,25 +15,26 @@
    <div class="container-fluid text-center">
     <div class="border">
     Number of scoops:
-    <input class="pickUp m-2" type="text" id="scoops" name="noOfScoop" value="" />
+    <input class="pickUp m-2" type="number" id="scoops" name="noOfScoop" min="1" max="4"  />
     <br />
 
     <div  class="radios" >
-      <input type="radio" name="cone" id="cone" value="cone" >Cone
-      <input type="radio" name="cone" id="cup" value="cups" checked > Cup<br>
+      <input type="radio" name="cone" id="cone" value="cone"checked  >Cone 
+      <input type="radio" name="cone" id="cup" value="cups" > Cup<br>
   </div>
 
 
-   
+   <div  id="options" >
     <p class="top">Toppings</p>
     <div class="options pt-4 pb-4">
-
+ 
       <input type="checkbox" id="sprinkle" name="sprinkle" value="sprinkle">
       <label for="sprinkle">Sprinkles ($.50)</label>
       <input type="checkbox" id="cream" name="cream" value="cream"> <label for="cream"> Whipped Cream (0.25)</label><br>
       <input type="checkbox" id="fudge" name="fudge" value="fudge"><label for=fudge">Hot Fudge ($1.25)</label>
       <input type="checkbox" id="cherry" name="cherry" value="cherry"><label for="cherry">Cherry ($0.25)</label><br>
     </div>
+  </div>
  
 
 
